@@ -29,10 +29,10 @@
 
 ## 目录结构
 
-`
+```text
 Agent_Develop/
-├── notes/            学习笔记
-├── configs/          配置文件练习
-├── scripts/          脚本练习
-└── README.md
-`
+  notes/         学习笔记
+  configs/       配置文件练习
+  scripts/       脚本练习
+  README.md
+```
