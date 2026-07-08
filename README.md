@@ -31,8 +31,8 @@
 
 `
 Agent_Develop/
-├── notes/           # 学习笔记
-├── configs/         # 配置文件练习
-├── scripts/         # 脚本练习
+├── notes/            学习笔记
+├── configs/          配置文件练习
+├── scripts/          脚本练习
 └── README.md
 `
