@@ -7,7 +7,4 @@
 - [命令行与 JSON 学习复盘](notes/命令行与JSON学习复盘.md)
 - [Markdown、YAML 与 GitHub 上传复盘](notes/Markdown学习记录.md)
 
-## 笔记维护规则
 
-- 新增或更新学习笔记后，需要同步更新 README 的「学习笔记」目录。
-- 笔记链接使用相对路径，方便在 GitHub 上直接跳转。
