@@ -12,6 +12,7 @@
 | [Markdown、YAML 与 GitHub 上传复盘](notes/Markdown学习记录.md) | Markdown 语法、任务清单、README 编写、git 操作 |
 | [HTTP 与 API 学习](notes/HTTP与API学习.md) | 请求响应流程、URL 组成、HTTP 方法、状态码、Header/Body、Python requests、REST 设计 |
 | [FastAPI 学习笔记](notes/FastAPI学习笔记.md) | FastAPI 快速启动、路由、参数、Pydantic 校验、错误处理、综合实战 |
+| [Docker 学习笔记](notes/Docker学习笔记.md) | Docker 核心概念、常用命令、Dockerfile 编写、容器化 FastAPI 服务 |
 
 ---
 
@@ -22,7 +23,11 @@
 | 阶段 | 学习内容 | 状态 |
 |------|---------|------|
 | 编程与工程基础 | Python 基础语法 · Git 与 GitHub · 命令行/JSON/YAML/Markdown | ✅ 已掌握 |
-| Web API 与后端基础 | HTTP 与 API 基础 · FastAPI 基础 | ✅ 已掌握 |
+| Web API 与后端基础 | HTTP 与 API 基础 · FastAPI 基础 · Docker 容器化 | ✅ 已掌握 |
+
+### ⏳ 延后学习（用到再补）
+
+Web API 与后端基础剩余：数据库基础（SQLite/PostgreSQL）— **当前目标偏向 Agent 开发，数据库用到再学**
 
 ### 📖 学习路线（按阶段）
 
@@ -44,8 +49,8 @@
 
 ```
 编程与工程基础    ████████████ 100% (3/3)
-Web API 与后端基础 ████████████ 100% (2/4)
-LLM 与 Prompt 基础 ░░░░░░░░░░░░   0% (0/5)
+Web API 与后端基础 ████████████ 100% (3/5) *数据库延后*
+LLM 与 Prompt 基础 ░░░░░░░░░░░░   0% (0/5) ← 下一阶段
 Tool Call 与 ReAct  ░░░░░░░░░░░░   0% (0/3)
 Agent 运行机制     ░░░░░░░░░░░░   0% (0/2)
 MCP 与工具生态     ░░░░░░░░░░░░   0% (0/2)
@@ -77,8 +82,9 @@ uvicorn scripts.study_tasks:app --reload
 
 ```text
 Agent_Develop/
-  notes/         学习笔记
+  notes/         学习笔记（含 Docker、FastAPI、HTTP 等）
   configs/       配置文件练习
   scripts/       脚本练习（含 study_tasks.py）
+  .skills/       自定义 Skill（如 10x-learning）
   README.md
 ```
