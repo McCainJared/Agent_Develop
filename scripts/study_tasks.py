@@ -22,11 +22,26 @@ app = FastAPI()
 #   status    —— 字符串，任务状态 ("done" 已完成 / "pending" 待办)
 #   note_link —— 字符串，关联的学习笔记文件路径
 tasks = [
-    {"id": 1, "title": "命令行 & JSON",     "status": "done",    "note_link": "notes/命令行与JSON学习复盘.md"},
-    {"id": 2, "title": "HTTP & API",        "status": "done",    "note_link": "notes/HTTP 与 API学习.md"},
-    {"id": 3, "title": "学习FastAPI",        "status": "pending", "note_link": "notes/Markdown学习记录.md"},
+    {"id": 1, "title": "命令行 & JSON",   "status": "done",    "note_link": "notes/命令行与JSON学习复盘.md"},
+    {"id": 2, "title": "HTTP & API",      "status": "done",    "note_link": "notes/HTTP 与 API学习.md"},
+    {"id": 3, "title": "学习FastAPI",      "status": "done",    "note_link": "notes/FastAPI学习笔记.md"},
+    {"id": 4, "title": "Python基础语法巩固",  "status": "pending", "note_link": null},
+    {"id": 5, "title": "Skills/MCP/Prompt/Function Call", "status": "pending", "note_link": null},
+    {"id": 6, "title": "手动搭建ReAct循环",   "status": "pending", "note_link": null},
+    {"id": 7, "title": "提示学习与思维链(CoT)", "status": "pending", "note_link": null},
+    {"id": 8, "title": "模型微调与部署",     "status": "pending", "note_link": null},
+    {"id": 9, "title": "RAG基本原理",       "status": "pending", "note_link": null},
+    {"id": 10, "title": "LangChain & LangGraph", "status": "pending", "note_link": null},
+    {"id": 11, "title": "Redis",           "status": "pending", "note_link": null},
+    {"id": 12, "title": "消息队列Kafka",     "status": "pending", "note_link": null},
+    {"id": 13, "title": "知识编辑(Knowledge Editing)", "status": "pending", "note_link": null},
+    {"id": 14, "title": "数学推理(蒸馏mini-R1)", "status": "pending", "note_link": null},
+    {"id": 15, "title": "工具学习(Tool Learning)", "status": "pending", "note_link": null},
+    {"id": 16, "title": "GUI Agent",        "status": "pending", "note_link": null},
+    {"id": 17, "title": "智能体安全",        "status": "pending", "note_link": null},
+    {"id": 18, "title": "RLHF安全对齐",     "status": "pending", "note_link": null},
+    {"id": 19, "title": "mini-code开发",    "status": "pending", "note_link": null},
 ]
-
 
 # ============================================================
 # 路由 ① GET /tasks —— 获取全部任务列表
