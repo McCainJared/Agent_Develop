@@ -1,0 +1,12 @@
+{
+  "agent_name": "study_agent",
+  "model": "deepseek-chat",
+  "max_steps": 5,
+  "enabled": true,
+  "tools": ["read_file", "write_file", "search"],
+  "memory":{
+    "enabled": true,
+    "path": "./notes"
+  }
+
+}

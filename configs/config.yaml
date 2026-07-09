@@ -1,0 +1,27 @@
+agent:
+  name: study_agent
+  model: deepseek-chat
+  max_steps: 5
+
+tool:
+  - name: read_file
+    enabled: true
+  - name: search
+    enabled: false
+
+memory:
+  enabled: true
+  path: ./notes
+
+{
+  "tools": [
+    {
+      "name": "read_file",
+      "enabled": true
+    },
+    {
+      "name": "search",
+      "enabled": false
+    }
+  ]
+}
