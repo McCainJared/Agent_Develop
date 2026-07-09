@@ -22,26 +22,63 @@ app = FastAPI()
 #   status    —— 字符串，任务状态 ("done" 已完成 / "pending" 待办)
 #   note_link —— 字符串，关联的学习笔记文件路径
 tasks = [
-    {"id": 1, "title": "命令行 & JSON",   "status": "done",    "note_link": "notes/命令行与JSON学习复盘.md"},
-    {"id": 2, "title": "HTTP & API",      "status": "done",    "note_link": "notes/HTTP 与 API学习.md"},
-    {"id": 3, "title": "学习FastAPI",      "status": "done",    "note_link": "notes/FastAPI学习笔记.md"},
-    {"id": 4, "title": "Python基础语法巩固",  "status": "pending", "note_link": null},
-    {"id": 5, "title": "Skills/MCP/Prompt/Function Call", "status": "pending", "note_link": null},
-    {"id": 6, "title": "手动搭建ReAct循环",   "status": "pending", "note_link": null},
-    {"id": 7, "title": "提示学习与思维链(CoT)", "status": "pending", "note_link": null},
-    {"id": 8, "title": "模型微调与部署",     "status": "pending", "note_link": null},
-    {"id": 9, "title": "RAG基本原理",       "status": "pending", "note_link": null},
-    {"id": 10, "title": "LangChain & LangGraph", "status": "pending", "note_link": null},
-    {"id": 11, "title": "Redis",           "status": "pending", "note_link": null},
-    {"id": 12, "title": "消息队列Kafka",     "status": "pending", "note_link": null},
-    {"id": 13, "title": "知识编辑(Knowledge Editing)", "status": "pending", "note_link": null},
-    {"id": 14, "title": "数学推理(蒸馏mini-R1)", "status": "pending", "note_link": null},
-    {"id": 15, "title": "工具学习(Tool Learning)", "status": "pending", "note_link": null},
-    {"id": 16, "title": "GUI Agent",        "status": "pending", "note_link": null},
-    {"id": 17, "title": "智能体安全",        "status": "pending", "note_link": null},
-    {"id": 18, "title": "RLHF安全对齐",     "status": "pending", "note_link": null},
-    {"id": 19, "title": "mini-code开发",    "status": "pending", "note_link": null},
+    {"id": 1,  "title": "Python 基础语法",                    "status": "done",    "stage": "编程与工程基础",     "note_link": null},
+    {"id": 2,  "title": "Git 与 GitHub 基础",                 "status": "done",    "stage": "编程与工程基础",     "note_link": null},
+    {"id": 3,  "title": "命令行、JSON、YAML、Markdown",        "status": "done",    "stage": "编程与工程基础",     "note_link": null},
+
+    {"id": 4,  "title": "HTTP 与 API 基础",                   "status": "done",    "stage": "Web API 与后端基础",  "note_link": null},
+    {"id": 5,  "title": "FastAPI 基础",                       "status": "done",    "stage": "Web API 与后端基础",  "note_link": null},
+    {"id": 6,  "title": "数据库基础：SQLite/PostgreSQL",       "status": "pending", "stage": "Web API 与后端基础",  "note_link": null},
+    {"id": 7,  "title": "Docker 基础",                        "status": "pending", "stage": "Web API 与后端基础",  "note_link": null},
+
+    {"id": 8,  "title": "LLM API 调用",                       "status": "pending", "stage": "LLM 与 Prompt 基础",  "note_link": null},
+    {"id": 9,  "title": "Prompt Engineering",                 "status": "pending", "stage": "LLM 与 Prompt 基础",  "note_link": null},
+    {"id": 10, "title": "结构化输出与解析",                    "status": "pending", "stage": "LLM 与 Prompt 基础",  "note_link": null},
+    {"id": 11, "title": "提示学习与思维链 (Prompt and CoT)",   "status": "pending", "stage": "LLM 与 Prompt 基础",  "note_link": null},
+    {"id": 12, "title": "模型微调与部署 (Fine-tuning)",       "status": "pending", "stage": "LLM 与 Prompt 基础",  "note_link": null},
+
+    {"id": 13, "title": "Function Call / Tool Call",           "status": "pending", "stage": "Tool Call 与 ReAct",  "note_link": null},
+    {"id": 14, "title": "手写 ReAct 循环",                     "status": "pending", "stage": "Tool Call 与 ReAct",  "note_link": null},
+    {"id": 15, "title": "工具学习 (Tool Learning)",            "status": "pending", "stage": "Tool Call 与 ReAct",  "note_link": null},
+
+    {"id": 16, "title": "Hello Agent 系统学习",                "status": "pending", "stage": "Agent 运行机制",     "note_link": null},
+    {"id": 17, "title": "Skills 机制",                         "status": "pending", "stage": "Agent 运行机制",     "note_link": null},
+
+    {"id": 18, "title": "MCP 基础",                            "status": "pending", "stage": "MCP 与工具生态",    "note_link": null},
+    {"id": 19, "title": "MCP + Skills 组合实践",               "status": "pending", "stage": "MCP 与工具生态",    "note_link": null},
+
+    {"id": 20, "title": "RAG 基本原理",                        "status": "pending", "stage": "RAG 与知识库",      "note_link": null},
+    {"id": 21, "title": "Embedding 与向量数据库",              "status": "pending", "stage": "RAG 与知识库",      "note_link": null},
+    {"id": 22, "title": "RAG 评估与优化",                      "status": "pending", "stage": "RAG 与知识库",      "note_link": null},
+
+    {"id": 23, "title": "LangChain 基础",                      "status": "pending", "stage": "主流 Agent 框架",   "note_link": null},
+    {"id": 24, "title": "LangGraph 基础",                      "status": "pending", "stage": "主流 Agent 框架",   "note_link": null},
+
+    {"id": 25, "title": "Redis 基础",                          "status": "pending", "stage": "状态、缓存与异步",  "note_link": null},
+    {"id": 26, "title": "Kafka 与消息队列",                    "status": "pending", "stage": "状态、缓存与异步",  "note_link": null},
+
+    {"id": 27, "title": "知识编辑 (Knowledge Editing)",        "status": "pending", "stage": "大模型进阶",        "note_link": null},
+    {"id": 28, "title": "数学推理 (蒸馏 mini-R1)",             "status": "pending", "stage": "大模型进阶",        "note_link": null},
+    {"id": 29, "title": "RLHF 安全对齐",                      "status": "pending", "stage": "大模型进阶",        "note_link": null},
+
+    {"id": 30, "title": "Agent Memory 设计",                   "status": "pending", "stage": "Agent 工程化与评估", "note_link": null},
+    {"id": 31, "title": "Agent Planning",                      "status": "pending", "stage": "Agent 工程化与评估", "note_link": null},
+    {"id": 32, "title": "Agent 评估与测试",                    "status": "pending", "stage": "Agent 工程化与评估", "note_link": null},
+    {"id": 33, "title": "GUI Agent",                           "status": "pending", "stage": "Agent 工程化与评估", "note_link": null},
+    {"id": 34, "title": "日志、监控与调试",                    "status": "pending", "stage": "Agent 工程化与评估", "note_link": null},
+    {"id": 35, "title": "智能体安全 (Agent Safety)",           "status": "pending", "stage": "Agent 工程化与评估", "note_link": null},
+    {"id": 36, "title": "安全、权限与成本控制",                "status": "pending", "stage": "Agent 工程化与评估", "note_link": null},
+    {"id": 37, "title": "部署一个 Agent 服务",                 "status": "pending", "stage": "Agent 工程化与评估", "note_link": null},
+
+    {"id": 38, "title": "mini-code Agent：读仓库",             "status": "pending", "stage": "Mini Code Agent 实战", "note_link": null},
+    {"id": 39, "title": "mini-code Agent：编辑与测试",         "status": "pending", "stage": "Mini Code Agent 实战", "note_link": null},
+    {"id": 40, "title": "mini-code Agent：规划与上下文管理",   "status": "pending", "stage": "Mini Code Agent 实战", "note_link": null},
+
+    {"id": 41, "title": "Go 语言基础",                         "status": "pending", "stage": "第二语言与工程视野", "note_link": null},
+
+    {"id": 42, "title": "S",                                   "status": "pending", "stage": "Agent 运行机制",     "note_link": null},
 ]
+
 
 # ============================================================
 # 路由 ① GET /tasks —— 获取全部任务列表

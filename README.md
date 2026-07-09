@@ -1,4 +1,4 @@
-# Agent_Develop
+﻿# Agent_Develop
 
 这个仓库用于记录 **AI Agent 开发学习过程**，包括学习笔记、练习代码和后续 Agent 开发项目。
 
@@ -17,57 +17,52 @@
 
 ## 学习路线
 
-### 基础阶段 ✅
+### ✅ 已完成
 
-- [x] 命令行 & JSON & YAML & Markdown
-- [x] HTTP & API
-- [x] FastAPI（学习任务管理 API v1）
+| 阶段 | 学习内容 | 状态 |
+|------|---------|------|
+| 编程与工程基础 | Python 基础语法 · Git 与 GitHub · 命令行/JSON/YAML/Markdown | ✅ 已掌握 |
+| Web API 与后端基础 | HTTP 与 API 基础 · FastAPI 基础 | ✅ 已掌握 |
 
-### AI Agent 核心阶段
+### 📖 学习路线（按阶段）
 
-| # | 学习主题 | 优先级 | 说明 |
-|---|---------|--------|------|
-| 1 | Python 基础语法巩固 | ⭐⭐⭐ | 类型注解、装饰器、异步、生成器 |
-| 2 | Skills / MCP / Prompt / Function Call | ⭐⭐⭐ | Agent 四大核心概念 |
-| 3 | 手动搭建 ReAct 循环 | ⭐⭐⭐ | 理解 Reasoning + Acting 的核心机制 |
-| 4 | RAG 基本原理 | ⭐⭐⭐ | 检索增强生成，让 LLM 带上下文回答 |
-| 5 | LangChain & LangGraph | ⭐⭐⭐ | 当前最主流的 Agent 框架 |
+| 阶段 | 学习内容 | 优先级 | 说明 |
+|------|---------|--------|------|
+| **LLM 与 Prompt 基础** | LLM API 调用 · Prompt Engineering · 结构化输出 · Prompt & CoT · 模型微调 | ⭐⭐⭐ | 理解 LLM 工作原理，掌握提示工程和微调 |
+| **Tool Call 与 ReAct** | Function Call · 手写 ReAct 循环 · 工具学习 | ⭐⭐⭐ | Agent 核心：推理 + 行动循环 |
+| **Agent 运行机制** | Hello Agent 系统学习 · Skills 机制 | ⭐⭐⭐ | 理解 Agent 的完整运行原理 |
+| **MCP 与工具生态** | MCP 基础 · MCP + Skills 组合实践 | ⭐⭐⭐ | 模型上下文协议，Agent 工具生态 |
+| **RAG 与知识库** | RAG 基本原理 · Embedding/向量数据库 · RAG 评估优化 | ⭐⭐⭐ | 检索增强生成，让 LLM 带上下文回答 |
+| **主流 Agent 框架** | LangChain 基础 · LangGraph 基础 | ⭐⭐⭐ | 当前最主流的 Agent 框架 |
+| **状态、缓存与异步** | Redis 基础 · Kafka 与消息队列 | ⭐⭐ | 缓存、会话管理、异步任务 |
+| **大模型进阶** | 知识编辑 · 数学推理(蒸馏) · RLHF 安全对齐 | ⭐⭐ | 深入 LLM 底层原理 |
+| **Agent 工程化与评估** | Agent Memory · Agent Planning · 评估测试 · GUI Agent · 日志监控 · 安全权限 · 部署 | ⭐⭐⭐ | 将 Agent 落地为生产级服务 |
+| **Mini Code Agent 实战** | 读仓库 · 编辑与测试 · 规划与上下文管理 | ⭐⭐⭐ | 端到端代码 Agent 项目 |
+| **第二语言与工程视野** | Go 语言基础 | ⭐⭐ | 拓展工程视野 |
 
-### 工程进阶阶段
+### 📊 进度总览
 
-| # | 学习主题 | 优先级 | 说明 |
-|---|---------|--------|------|
-| 6 | Redis | ⭐⭐ | 缓存、会话管理 |
-| 7 | 消息队列 Kafka | ⭐⭐ | 异步任务、事件驱动 |
-| 8 | mini-code 开发 | ⭐⭐ | 端到端小型 Agent 项目 |
-
-### 大模型进阶（参考 dive-into-llms 补充）
-
-| # | 学习主题 | 来源 | 说明 |
-|---|---------|------|------|
-| 9 | 提示学习与思维链（Prompt & CoT） | dive-into-llms ch2 | Zero-shot / Few-shot / Chain-of-Thought |
-| 10 | 模型微调与部署（Fine-tuning） | dive-into-llms ch1 | Transformers 微调 + Gradio 部署 |
-| 11 | 知识编辑（Knowledge Editing） | dive-into-llms ch3 | 修改模型对特定知识的记忆 |
-| 12 | 数学推理（Math Reasoning） | dive-into-llms ch4 | 蒸馏 mini-R1 思路 |
-| 13 | 工具学习（Tool Learning） | dive-into-llms ch7 | Function Call / Tool Use |
-| 14 | Agent（智能体） | dive-into-llms ch8 | Agent 设计与实现 |
-| 15 | GUI Agent | dive-into-llms ch9 | 操作界面的 Agent |
-| 16 | 智能体安全 | dive-into-llms ch10 | Agent 安全风险与防护 |
-| 17 | RLHF 安全对齐 | dive-into-llms ch11 | 基于 PPO 的 RLHF 实验 |
-
-### 对比分析：原路线 vs dive-into-llms
-
-| 维度 | 原路线（你的） | dive-into-llms 补充 |
-|------|--------------|-------------------|
-| 深度侧重 | Agent 开发（LangChain、ReAct、MCP） | LLM 底层原理（微调、对齐、安全） |
-| 补充价值 | 你缺了提示工程、思维链、模型微调 | 这些是理解 Agent 运作原理的前提 |
-| 新增建议 | 插入 Prompt/CoT + 基础微调到核心阶段 | 在 LangChain 之前先理解 Prompt 和 CoT |
+```
+编程与工程基础    ████████████ 100% (3/3)
+Web API 与后端基础 ████████████ 100% (2/4)
+LLM 与 Prompt 基础 ░░░░░░░░░░░░   0% (0/5)
+Tool Call 与 ReAct  ░░░░░░░░░░░░   0% (0/3)
+Agent 运行机制     ░░░░░░░░░░░░   0% (0/2)
+MCP 与工具生态     ░░░░░░░░░░░░   0% (0/2)
+RAG 与知识库       ░░░░░░░░░░░░   0% (0/3)
+主流 Agent 框架    ░░░░░░░░░░░░   0% (0/2)
+状态、缓存与异步   ░░░░░░░░░░░░   0% (0/2)
+大模型进阶         ░░░░░░░░░░░░   0% (0/3)
+Agent 工程化与评估 ░░░░░░░░░░░░   0% (0/8)
+Mini Code Agent 实战 ░░░░░░░░░░░░ 0% (0/3)
+第二语言与工程视野  ░░░░░░░░░░░░   0% (0/1)
+```
 
 ---
 
 ## 学习任务管理 API
 
-当前学习任务：`scripts/study_tasks.py`（FastAPI 搭建）
+当前学习任务：`scripts/study_tasks.py`（FastAPI 搭建，42 条任务，与 Notion 数据库同步）
 
 **如何使用：**
 ```bash
