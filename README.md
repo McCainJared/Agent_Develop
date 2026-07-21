@@ -14,6 +14,7 @@
 | [FastAPI 学习笔记](notes/FastAPI学习笔记.md) | FastAPI 快速启动、路由、参数、Pydantic 校验、错误处理、综合实战 |
 | [Docker 学习笔记](notes/Docker学习笔记.md) | Docker 核心概念、常用命令、Dockerfile 编写、容器化 FastAPI 服务 |
 | [LLM API 调用学习笔记](notes/LLM%20API调用学习笔记.md) | API Key/Base URL、多轮对话、参数调优、结构化输出、Streaming |
+| [Function Call 与 ReAct 学习笔记](notes/Function%20Call%20%E4%B8%8E%20ReAct%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0.md) | Function Call 核心概念、tools 定义、tool_choice 三种模式、tool_calls 解析流程、**role="tool" + tool_call_id 闭环、ReAct 循环骨架、终止条件与 Token 管理** |
 
 ---
 
@@ -25,6 +26,7 @@
 |------|---------|------|
 | 编程与工程基础 | Python 基础语法 · Git 与 GitHub · 命令行/JSON/YAML/Markdown | ✅ 已掌握 |
 | Web API 与后端基础 | HTTP 与 API 基础 · FastAPI 基础 · Docker 容器化 | ✅ 已掌握 |
+| LLM 与 Prompt 基础 | LLM API 调用 · Prompt Engineering · Function Call 与 ReAct | ✅ 已掌握 |
 
 ### ⏳ 延后学习（用到再补）
 
@@ -52,7 +54,7 @@ Web API 与后端基础剩余：数据库基础（SQLite/PostgreSQL）
 编程与工程基础    ████████████ 100% (3/3)
 Web API 与后端基础 ████████████ 100% (3/5) *数据库延后*
 LLM 与 Prompt 基础 ████░░░░░░░░  20% (1/5) ← 进行中
-Tool Call 与 ReAct  ░░░░░░░░░░░░   0% (0/3)
+ Tool Call 与 ReAct | ████████████ 40% (1/3) ← 进行中 
 Agent 运行机制     ░░░░░░░░░░░░   0% (0/2)
 MCP 与工具生态     ░░░░░░░░░░░░   0% (0/2)
 RAG 与知识库       ░░░░░░░░░░░░   0% (0/3)
